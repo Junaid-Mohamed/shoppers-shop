@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import logo from "./assets/logo.png";
 import cart_logo from "./assets/cart_icon.png"
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -17,10 +18,10 @@ const Navbar = () => {
       </div>
     
         <ul className='text-nav-items flex items-center gap-12 text-xl font-medium'>
-            <li onClick={()=>setActiveMenu("shop")} className='cursor-pointer'>Shop {activeMenu==="shop"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
-            <li  onClick={()=>setActiveMenu("men")}  className='cursor-pointer' >Men {activeMenu==="men"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
-            <li  onClick={()=>setActiveMenu("women")} className='cursor-pointer'>Women {activeMenu==="women"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
-            <li  onClick={()=>setActiveMenu("kids")} className='cursor-pointer'>Kids {activeMenu==="kids"?<hr className=' h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
+            <li onClick={()=>setActiveMenu("shop")} className='cursor-pointer'><Link to='/'> Shop</Link> {activeMenu==="shop"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
+            <li  onClick={()=>setActiveMenu("men")}  className='cursor-pointer' ><Link to='/mens'>  Men </Link>{activeMenu==="men"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
+            <li  onClick={()=>setActiveMenu("women")} className='cursor-pointer'><Link to='/womens'>  Women </Link>{activeMenu==="women"?<hr className='h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
+            <li  onClick={()=>setActiveMenu("kids")} className='cursor-pointer'><Link to='/kids'> Kids</Link>  {activeMenu==="kids"?<hr className=' h-1 rounded-xl bg-[#FF4141]'/>:<></>} </li>
         </ul>
      
       <div className='flex items-center gap-11'>
