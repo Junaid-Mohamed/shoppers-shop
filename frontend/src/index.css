@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+}
+
 .custom-pink {
     background-color: rgba(253, 225, 255, 1);
   }
